@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import{HttpClient, HttpHeaders} from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, from } from 'rxjs';
 import {map} from "rxjs/internal/operators";
-const urlFront="https://dev.azure.com/selisech/"
+import {urlFront} from '../../environments/environment'
 @Injectable({
   providedIn: 'root'
 })

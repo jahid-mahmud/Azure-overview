@@ -28,7 +28,7 @@ export class DashboardComponent implements OnInit {
   animations: boolean = true;
   xAxis: boolean = true;
   yAxis: boolean = true;
-  
+  noDataAvailableImage="https://cdn.vsassets.io/ext/ms.vss-reporting/reporting-visuals-common/images/errorWidget-large.ioJbBClKfjicdp7c.png"
   colorScheme = {
     domain: ['#75e0cb', '#65b8f0', '#b8f065','#f0c965','#c098f5']
   };

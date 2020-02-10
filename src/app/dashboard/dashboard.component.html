@@ -14,7 +14,7 @@
 </div>
 <div class="page mt-20"  fxLayout="row" fxLayoutAlign="space-around center" *ngIf="!loading && !dataAvailable">
  <mat-card >
-   <img src="https://cdn.vsassets.io/ext/ms.vss-reporting/reporting-visuals-common/images/errorWidget-large.ioJbBClKfjicdp7c.png">
+   <img [src]="noDataAvailableImage">
    NO DATA AVAILABLE
  </mat-card>
 </div>

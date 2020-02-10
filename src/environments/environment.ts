@@ -5,6 +5,7 @@
 export const environment = {
   production: false
 };
+export const urlFront="https://dev.azure.com/selisech/";
 
 /*
  * For easier debugging in development mode, you can import the following file
