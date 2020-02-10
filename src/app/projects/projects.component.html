@@ -1,0 +1,19 @@
+<div *ngIf="isLoading">
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+<div *ngIf="!isLoading">
+  <div fxLayout="row" fxLayoutAlign="space-evenly center" fxLayout="row wrap">
+    <div *ngFor="let project of projects">
+      <a [routerLink]="['dashboard', project.id]">
+        <mat-card class="card" fxLayout="column" fxLayoutAlign="space-evenly center">
+          <img class="fit-picture"
+          src={{project.imageUrl}}
+          alt="LOGO">
+          <span >{{project.name}}</span>
+        </mat-card>
+      </a>         
+      </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

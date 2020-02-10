@@ -1,0 +1,66 @@
+<div class="header" fxLayout="row" >
+  <a mat-raised-button routerLink="">
+    <i class="material-icons">
+      keyboard_backspace
+      </i>
+  </a>
+  <div class="mr-40">
+    {{name}} - OVERVIEW
+  </div>
+  
+</div>
+<div *ngIf="loading" class="mt-10">
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+<div class="page mt-20"  fxLayout="row" fxLayoutAlign="space-around center" *ngIf="!loading && !dataAvailable">
+ <mat-card >
+   <img src="https://cdn.vsassets.io/ext/ms.vss-reporting/reporting-visuals-common/images/errorWidget-large.ioJbBClKfjicdp7c.png">
+   NO DATA AVAILABLE
+ </mat-card>
+</div>
+<div class="page">
+  <div fxLayout="row" fxLayoutAlign="space-around center" *ngIf="!loading && dataAvailable">
+    <div fxLayout="row">
+      <mat-card class="card bgB hv">
+        <div>
+          <div>Active Tasks</div>
+          <div class="fs-80">{{activeTaskCount}}</div>
+          <div>WorkItems</div>
+        </div>
+      </mat-card>
+      <mat-card class="card bgG hv">
+        <div>
+          <div>Completed Tasks</div>
+          <div class="fs-80">{{completedTaskCount}}</div>
+          <div>WorkItems</div>
+        </div>
+      </mat-card>
+    </div>
+    <mat-card class="hv">
+      <span class="ml-44">Tickets by Assigned To</span>
+      <ngx-charts-pie-chart [view]="view" [scheme]="colorScheme" [results]="assignedData" [gradient]="gradient"
+        [legend]="showLegend" [legendPosition]="legendPosition" [labels]="showLabels" [doughnut]="isDoughnut"
+        (select)="onSelect($event)" (activate)="onActivate($event)" (deactivate)="onDeactivate($event)">
+      </ngx-charts-pie-chart>
+    </mat-card>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="space-around center" *ngIf="!loading && dataAvailable" class="pd-10">  
+    <mat-card  class="hv">
+      <span class="ml-44">Summary of Tickets</span>
+      <ngx-charts-bar-vertical-stacked [view]="view" [scheme]="colorScheme" [results]="taskStatusPerPersonData"
+        [gradient]="gradient" [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend"
+        [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel" [animations]="animations" (select)="onSelect($event)">
+      </ngx-charts-bar-vertical-stacked>
+    </mat-card>
+    <mat-card class="mr-22 hv">
+      <span class="ml-44">State of Tickets</span>
+    <ngx-charts-bar-vertical [view]="view" [scheme]="colorScheme" [results]="taskStatusData" [gradient]="gradient"
+        [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel">
+      </ngx-charts-bar-vertical>
+    </mat-card>
+  </div>
+</div>
+
+

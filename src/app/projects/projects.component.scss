@@ -1,0 +1,29 @@
+.custom{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+}
+.custom1{
+    width: 94%;
+    margin-top:20px;
+}
+.cs{
+    margin:solid 4px;
+}
+.card{
+    height: 250px;
+    width: 600px;
+    margin-top: 40px;
+    box-shadow: 4px 5px 8px #888888;
+    background-color: #dfdddd;
+}
+.card:hover {
+    background-color: white;
+  }
+.fit-picture {
+margin-bottom: 45px;
+max-width:100%;
+max-height: 140px;
+width: auto;
+height: auto;
+}
