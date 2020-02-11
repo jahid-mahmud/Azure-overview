@@ -4,14 +4,14 @@
 <div *ngIf="!isLoading">
   <div fxLayout="row" fxLayoutAlign="center center" fxLayout="row wrap">
     <div *ngFor="let project of projects" class="p-h-15">
-      <a [routerLink]="['dashboard', project.id]">
+      <div [routerLink]="['dashboard', project.id]">
         <mat-card class="card" fxLayout="column" fxLayoutAlign="space-evenly center">
           <img class="fit-picture"
           src={{project.imageUrl}}
           alt="LOGO">
           <div class="fs-24">{{project.name}}</div>
         </mat-card>
-      </a>         
+      </div>         
       </div>
   </div>
 </div>
