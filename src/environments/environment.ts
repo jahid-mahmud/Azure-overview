@@ -3,9 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  urlFront:"https://dev.azure.com/selisech/"
 };
-export const urlFront="https://dev.azure.com/selisech/";
+// export const urlFront="https://dev.azure.com/selisech/";
 
 /*
  * For easier debugging in development mode, you can import the following file
