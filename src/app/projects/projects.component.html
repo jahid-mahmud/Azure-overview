@@ -1,6 +1,18 @@
+<mat-toolbar class="toolbar">
+  <img class="fit-picture-top" src={{seliseLogoUrl}}>
+</mat-toolbar>
 <div *ngIf="isLoading">
   <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>
+<div class="detailText">
+  <p>
+    SELISE IT Service Management (ITSM) is one of the most familiar key-terms to implement and manage quality IT (Information Technology) services that meet the needs of the business. ITSM looks into the services offered by an IT company after the delivery of a product/service. It focuses mainly on the end-user satisfaction, services, quality, cost, and business. After the successful delivery of a product/service, the ITSM department is responsible to ensure 24x7 support services. It is responsible to receive any query and input from clients and provide any bug fixes in case of any anomalies. The operations of the ITSM department is to ensure IT services are delivered effectively and efficiently. 
+  </p>
+  <p>
+      IT Service Management in a business has various positive impacts. The main objective of  ITSM is to provide an improved quality of services as well as ensure efficiency. It complies with the best practices of monitoring and bug fixing the application and assigns dedicated support staff to continually manage the collaboration and improvement of the system’s performance.
+  </p>
+</div>
+
 <div *ngIf="!isLoading">
   <div fxLayout="row" fxLayoutAlign="center center" fxLayout="row wrap">
     <div *ngFor="let project of projects" class="p-h-15">

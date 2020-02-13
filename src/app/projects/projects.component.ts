@@ -11,6 +11,7 @@ export class ProjectsComponent implements OnInit {
   projects=[];
   teamId: any;
   isLoading: boolean;
+  seliseLogoUrl="https://selise.ch/wp-content/uploads/2019/06/selise-logo.png"
   imagesources=[{
     "name":"Outdoorchef",
     "imageUrl":"https://ch.outdoorchef.com/wp-content/themes/outdoorchef/assets/images/outdoorchef_new_logo1.png"

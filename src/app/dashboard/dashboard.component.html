@@ -1,15 +1,19 @@
-<div class="header" fxLayout="row" >
-  <a mat-raised-button routerLink="">
-    <i class="material-icons">
-      keyboard_backspace
-      </i>
-  </a>
-  <div class="mr-40">
-    {{name}} - OVERVIEW
+<mat-toolbar class="toolbar">
+  <div class="" fxLayout="row" >
+    <img class="fit-picture-top" src={{seliseLogoUrl}}>
+    <a class=" ml-20 mt-12" routerLink="">
+      <i class="material-icons">
+        keyboard_backspace
+        </i>
+    </a>
+    <div class="mr-40 mt-6">
+      {{name}} - OVERVIEW
+    </div>
+    
   </div>
-  
-</div>
-<div *ngIf="loading" class="mt-10">
+</mat-toolbar>
+
+<div *ngIf="loading" >
   <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </div>
 <div class="page mt-20"  fxLayout="row" fxLayoutAlign="space-around center" *ngIf="!loading && !dataAvailable">
@@ -18,7 +22,7 @@
    NO DATA AVAILABLE
  </mat-card>
 </div>
-<div class="page">
+<div class="page mt-32" >
   <div fxLayout="row" fxLayoutAlign="space-around center" *ngIf="!loading && dataAvailable">
     <div fxLayout="row" class="textAlign">
       <mat-card class="card bgB hv">

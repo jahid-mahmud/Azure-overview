@@ -29,6 +29,7 @@ export class DashboardComponent implements OnInit {
   xAxis: boolean = true;
   yAxis: boolean = true;
   noDataAvailableImage="https://cdn.vsassets.io/ext/ms.vss-reporting/reporting-visuals-common/images/errorWidget-large.ioJbBClKfjicdp7c.png"
+  seliseLogoUrl="https://selise.ch/wp-content/uploads/2019/06/selise-logo.png"
   colorScheme = {
     domain: ['#75e0cb', '#65b8f0', '#b8f065','#f0c965','#c098f5']
   };
