@@ -39,7 +39,7 @@ export class DataService {
 	 * 
 	 */
   getToken(){
-   return this.http.get('http://localhost:3000/api/getToken').pipe(map((res:any)=>{
+   return this.http.get(environment.tokenUrl+'/api/getToken').pipe(map((res:any)=>{
       console.log(res);
       return res.Token
     }))

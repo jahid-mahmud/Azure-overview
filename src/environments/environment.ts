@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  urlFront:"https://dev.azure.com/selisech/"
+  urlFront:"https://dev.azure.com/selisech/",
+  tokenUrl:"http://localhost:3010"
 };
-// export const urlFront="https://dev.azure.com/selisech/";
 
 /*
  * For easier debugging in development mode, you can import the following file
